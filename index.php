@@ -8,6 +8,6 @@
     <p>Here is my <strong>goose</strong></p>
     <p>Run it on the cloud for me</p>
     <p>I do not care how</p>
-    <small>Container id: <?php echo gethostname(); ?></small>
+    <small>Instance id: <?php echo gethostname(); ?></small>
   </body>
 </html>
