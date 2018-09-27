@@ -6,6 +6,6 @@ Just run `cf push` to use.
 
 The application will provide a photo of a goose running in 3 container instances. It will also display the container ID that served your request so that you can see the load balancing working and the container lifecycle when you work with the application.
 
-The goose image has been donated into the public domain by the photographer.
+The cropped goose image has been donated into the public domain by the photographer.
 
 ![Alt](/goose.jpg "Goose")
