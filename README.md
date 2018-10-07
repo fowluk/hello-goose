@@ -1,4 +1,4 @@
-# Hello Goose
+# Hello Goose!
 
 A really simple demo application for Pivotal Application Service / Cloud Foundry.
 
