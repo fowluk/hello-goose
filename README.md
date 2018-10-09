@@ -13,4 +13,4 @@ The cropped goose image has been donated into the public domain by the photograp
  * [DotNetCore](dotnetcore/): A Razor based implementation using Microsoft .Net Core.
  * [JSP](jsp/): A simple and arguably retro Java example using Java Servlet Pages.
  * [PHP](php/): Probaby the simplest implementation of all.
- * [Python](pyton/): Quick and simple using Flask and a Jinja2 template with the option to vendor dependencies.
+ * [Python](python/): Quick and simple using Flask and a Jinja2 template with the option to vendor dependencies.
