@@ -1,6 +1,6 @@
 # Hello Goose - Java Servlet Page
 
-The simplest and perhaps least optimal example possible with Java. Some might say it's all a bit 1999, but then again, that was a good year! The Java buildpack will supply a tomcat instance and deploy the WAR file into it. 
+The simplest and perhaps least modern example possible with Java. This was state of the art on CF installs in 1999. That was a good year! The Java buildpack will supply a tomcat instance and deploy the WAR file into it. 
 
 Note that we explicitly disable session management in the JSP. The gorouter supports session affinity for the JSESSIONID cookie, so we have to turn sessions off to make the loadbalancing work and show the id changing. 
 
