@@ -1,0 +1,10 @@
+applications:
+- name: hello-goose
+  memory: 512m
+  instances: 3
+  buildpacks:
+    - java_buildpack
+  path: target/jsp-0.0.1-SNAPSHOT.war
+  env:
+    JAVA_OPTS: "-Xmx256m"
+

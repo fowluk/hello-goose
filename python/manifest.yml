@@ -1,0 +1,5 @@
+applications:
+- name: hello-goose
+  memory: 512M
+  instances: 3
+  command: FLASK_APP=hello_goose.py flask run -h 0.0.0.0 -p 8080
