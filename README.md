@@ -1,8 +1,8 @@
 # Hello Goose
 
-A really simple demo application for Pivotal Application Service / Cloud Foundry.
+A really simple demo application in a number of languages for Pivotal Application Service / Cloud Foundry.
 
-Just run `cf push` to use.
+Pick your language of choice and follow the instructions in the README within that directory.
 
 The application will provide a photo of a goose running in 3 container instances. It will also display the instance ID that served your request so that you can see the load balancing working and the container lifecycle when you work with the application.
 
