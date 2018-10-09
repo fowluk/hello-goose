@@ -10,6 +10,7 @@ The cropped goose image has been donated into the public domain by the photograp
 
 ![Alt](php/goose.jpg "Goose")
 
+ * [DotNetCore](dotnetcore/): A Razor based implementation using Microsoft .Net Core.
  * [JSP](jsp/): A simple and arguably retro Java example using Java Servlet Pages.
  * [PHP](php/): Probaby the simplest implementation of all.
  * [Python](pyton/): Quick and simple using Flask and a Jinja2 template with the option to vendor dependencies.
