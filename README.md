@@ -8,4 +8,8 @@ The application will provide a photo of a goose running in 3 container instances
 
 The cropped goose image has been donated into the public domain by the photographer.
 
-![Alt](/goose.jpg "Goose")
+![Alt](php/goose.jpg "Goose")
+
+[JSP](jsp/README.md)
+[PHP](php/README.md)
+[Python](python/README.md)
