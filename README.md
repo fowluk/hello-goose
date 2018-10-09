@@ -10,6 +10,6 @@ The cropped goose image has been donated into the public domain by the photograp
 
 ![Alt](php/goose.jpg "Goose")
 
-[JSP](jsp/README.md)
-[PHP](php/README.md)
-[Python](python/README.md)
+[JSP](jsp/): A simple and arguably retro Java example using Java Servlet Pages.
+[PHP](php/): Probaby the simplest implementation of all.
+[Python](pyton/): Quick and simple using Flask and a Java template with the option to vendor dependencies.
