@@ -1,6 +1,6 @@
-# Hello Goose - Dot Net Core (Razor Pages)
+# Hello Goose - .Net Core (Razor Pages)
 
-This is a Microsoft Dot Net Core application, but you can still happily play with this on linux or macos. Dotnetcore runs happily in all three environments. This was developed and tested locally on Ubuntu.
+This is a Microsoft .Net Core application, but you can still happily play with this on linux or macos as .Net Core runs happily in all three environments. This was developed and tested locally on Ubuntu.
 
 Like the JSP version, this uses the INSTANCE_GUID environment variable rather than gethostname().
 
