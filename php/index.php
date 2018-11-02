@@ -8,6 +8,6 @@
     <p>Here is my <strong>goose</strong></p>
     <p>Run it on the cloud for me</p>
     <p>I do not care how</p>
-    <small>Instance id: <?php echo gethostname(); ?></small>
+    <small>Instance id: <?php echo gethostname(); ?><br/><a href="https://github.com/jgjeffrey/hello-goose">github.com/jgjeffrey/hello-goose</a></small>
   </body>
 </html>
