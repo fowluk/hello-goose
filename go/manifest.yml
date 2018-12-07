@@ -1,0 +1,7 @@
+applications:
+- name: hello-goose
+  memory: 512M
+  instances: 3
+  command: hello-goose
+  env:
+    GOPACKAGENAME: hello-goose
