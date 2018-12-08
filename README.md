@@ -10,6 +10,7 @@ The cropped goose image has been donated into the public domain by the photograp
 
 ![Alt](php/goose.jpg "Goose")
 
+ * [Binary](binary/): An example using the binary buildpack.
  * [DotNetCore](dotnetcore/): A Razor Pages based implementation using Microsoft .Net Core.
  * [JSP](jsp/): A simple and arguably retro Java example using Java Servlet Pages.
  * [Spring Boot](spring-boot/): A simple Spring Boot implementation.
