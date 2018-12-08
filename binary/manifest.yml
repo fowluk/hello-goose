@@ -1,0 +1,6 @@
+applications:
+- name: hello-goose
+  memory: 512M
+  instances: 3
+  command: ./app/binary
+  buildpack: binary_buildpack

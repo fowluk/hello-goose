@@ -2,3 +2,4 @@
 python/vendor/*
 jsp/target/*
 spring-boot/target/*
+binary/app/binary
