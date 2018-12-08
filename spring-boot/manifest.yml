@@ -1,0 +1,5 @@
+applications:
+- name: hello-goose
+  memory: 1024M
+  instances: 1
+  path: target/hello-goose-0.0.1-SNAPSHOT.jar
