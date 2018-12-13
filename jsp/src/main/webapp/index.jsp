@@ -24,7 +24,7 @@
 </div>
 <div>
   <h4>Server sent information :</h4>
-  <p>Instance id: <%= System.getenv("INSTANCE_GUID") %></p>
+  <p>Instance id: <%= System.getenv("CF_INSTANCE_GUID") %></p>
   <p>Instance index: <%= System.getenv("CF_INSTANCE_INDEX") %></p>
 </div>
 <footer>
