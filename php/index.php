@@ -1,13 +1,35 @@
-<html>
-  <head>
-    <title>Hello Goose</title>
-  </head>
-  <body>
-    <h1>Hello Goose</h1>
-    <img src="goose.jpg" width="50%"/><p/>
-    <p>Here is my <strong>goose</strong></p>
-    <p>Run it on the cloud for me</p>
-    <p>I do not care how</p>
-    <small>Instance id: <?php echo gethostname(); ?><br/><a href="https://github.com/jgjeffrey/hello-goose">github.com/jgjeffrey/hello-goose</a></small>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Goose !</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <h1>Hello Goose ! </h1>
+</nav>
+<div>
+    <img src="images/goose.jpg" width="100%"/>
+</div>
+
+<div>
+    <blockquote>
+        Here is my goose <br>
+        Run it on the cloud for me <br>
+        I do not care how
+        <p>- James Jeffrey,<br> Chief Goose Evangelist</p>
+    </blockquote>
+</div>
+<div>
+    <h4>Server sent information :</h4>
+    <p>Instance id: <?php echo getenv('CF_INSTANCE_GUID'); ?></p>
+    <p>Instance index: <?php echo getenv('CF_INSTANCE_INDEX'); ?></p>
+</div>
+<footer>
+    <div>
+        <a href="https://github.com/jgjeffrey/hello-goose">Contribute here and claim your Goose contributor badge</a>
+    </div>
+</footer>
+</body>
 </html>
