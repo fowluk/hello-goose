@@ -1,7 +1,9 @@
+---
 applications:
 - name: hello-goose
   memory: 512M
   instances: 3
   command: ./binary
   path: app
-  buildpacks: [binary_buildpack]
+  stack: cflinuxfs3
+  buildpack: binary_buildpack
