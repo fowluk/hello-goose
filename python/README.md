@@ -1,5 +1,3 @@
 # Hello Goose - Python
 
-The python version of the application has few external dependencies and requires no configuration. Just run `cf push` to use.
-
-If you are deploying in an environment where the buildpack will not be able to fetch libraries from the cheese shop, then you will have to vendor the dependencies. See [the docs](https://docs.cloudfoundry.org/buildpacks/python/index.html#vendoring).
+The python version of the application has few external dependencies (packaged in the vendor folder) and requires no configuration. Just run `cf push` to use.
