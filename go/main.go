@@ -28,7 +28,7 @@ func main() {
 		InstanceIndex: os.Getenv("CF_INSTANCE_INDEX"),
 	}
 
-	tmpl = template.Must(template.ParseFiles("index.html.template"))
+	tmpl = template.Must(template.New("goose").Parse(gooseTemplate))
 
 	http.HandleFunc("/", IndexHandler)
 	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
