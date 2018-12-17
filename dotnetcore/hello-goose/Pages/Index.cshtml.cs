@@ -10,10 +10,13 @@ namespace hello_goose.Pages
     public class IndexModel : PageModel
     {
 
-        public string HostName = "";
+        public string InstanceId = "";
+        public string InstanceIndex = "";
+
         public void OnGet()
         {
-          HostName = Environment.GetEnvironmentVariable("INSTANCE_GUID");
+          InstanceId = Environment.GetEnvironmentVariable("CF_INSTANCE_GUID");
+          InstanceIndex = Environment.GetEnvironmentVariable("CF_INSTANCE_INDEX");
         }
     }
 }

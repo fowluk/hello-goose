@@ -1,0 +1,32 @@
+nav {
+    width: 100%;
+    background-color: #008774;
+    padding: 10px 10px 10px 30px ;
+}
+body {
+    background-color: #FFFFFF;
+    color: #00253E;
+    font: normal 1.2em Arial, serif;
+    margin:0;
+}
+h1   {
+
+}
+blockquote p    {
+    font-weight: bold;
+}
+div {
+    width: 512px;
+    padding: 25px;
+    margin: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+blockquote
+{
+    font-style:normal;
+    margin-left: 0;
+    padding-left: 80px;
+    background: url('../images/quotes.png') no-repeat;
+    min-height: 30px;
+}

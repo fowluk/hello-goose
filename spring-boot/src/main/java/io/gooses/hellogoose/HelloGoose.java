@@ -12,8 +12,11 @@ public class HelloGoose {
 
 	@GetMapping(value = "/")
         public String index(Model model) {
-		String hostname = System.getenv("INSTANCE_GUID");
-		model.addAttribute("hostname", hostname);
+		String instanceGuid = System.getenv("CF_INSTANCE_GUID");
+		String instanceIndex = System.getenv("CF_INSTANCE_INDEX");
+
+		model.addAttribute("instance_guid", instanceGuid);
+		model.addAttribute("instance_index", instanceIndex);
                 return "index";
         }
 

@@ -4,7 +4,7 @@ applications:
   instances: 3
   buildpacks:
     - java_buildpack
-  path: target/jsp-0.0.1-SNAPSHOT.war
+  path: target/hello-goose-0.0.1-SNAPSHOT.war
   env:
     JAVA_OPTS: "-Xmx256m"
 
