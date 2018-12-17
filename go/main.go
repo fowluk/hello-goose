@@ -16,7 +16,7 @@ var (
 	tmpl *template.Template
 )
 
-func IndexHandler(w http.ResponseWriter, r *http.Request) {
+func indexHandler(w http.ResponseWriter, r *http.Request) {
 	if err := tmpl.Execute(w, info); err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 	}
@@ -30,7 +30,7 @@ func main() {
 
 	tmpl = template.Must(template.New("goose").Parse(gooseTemplate))
 
-	http.HandleFunc("/", IndexHandler)
+	http.HandleFunc("/", indexHandler)
 	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
 	http.ListenAndServe(":8080", nil)
 }
