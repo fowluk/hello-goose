@@ -2,7 +2,6 @@ package main
 
 import (
 	"html/template"
-	"io/ioutil"
 	"net/http"
 	"os"
 )
@@ -12,19 +11,13 @@ type instanceInfo struct {
 	InstanceIndex string
 }
 
-var info instanceInfo
+var (
+	info instanceInfo
+	tmpl *template.Template
+)
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	f, err := ioutil.ReadFile("index.html.template")
-	if err != nil {
-		panic(err)
-	}
-	tmpl, err := template.New("goose").Parse(string(f))
-	if err != nil {
-		panic(err)
-	}
-	err = tmpl.Execute(w, info)
-	if err != nil {
+	if err := tmpl.Execute(w, info); err != nil {
 		panic(err)
 	}
 }
@@ -34,6 +27,8 @@ func main() {
 		InstanceID:    os.Getenv("CF_INSTANCE_GUID"),
 		InstanceIndex: os.Getenv("CF_INSTANCE_INDEX"),
 	}
+
+	tmpl = template.Must(template.ParseFiles("index.html.template"))
 
 	http.HandleFunc("/", IndexHandler)
 	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
