@@ -18,7 +18,7 @@ var (
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	if err := tmpl.Execute(w, info); err != nil {
-		panic(err)
+		w.WriteHeader(http.StatusInternalServerError)
 	}
 }
 
