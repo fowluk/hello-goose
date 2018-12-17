@@ -7,14 +7,14 @@ import (
 	"os"
 )
 
-type vars struct {
+type instanceInfo struct {
 	InstanceID    string
 	InstanceIndex string
 }
 
+var info instanceInfo
+
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	id := os.Getenv("CF_INSTANCE_GUID")
-	index := os.Getenv("CF_INSTANCE_INDEX")
 	f, err := ioutil.ReadFile("index.html.template")
 	if err != nil {
 		panic(err)
@@ -23,13 +23,18 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		panic(err)
 	}
-	err = tmpl.Execute(w, vars{InstanceID: id, InstanceIndex: index})
+	err = tmpl.Execute(w, info)
 	if err != nil {
 		panic(err)
 	}
 }
 
 func main() {
+	info = instanceInfo{
+		InstanceID:    os.Getenv("CF_INSTANCE_GUID"),
+		InstanceIndex: os.Getenv("CF_INSTANCE_INDEX"),
+	}
+
 	http.HandleFunc("/", IndexHandler)
 	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
 	http.ListenAndServe(":8080", nil)
