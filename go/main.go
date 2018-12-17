@@ -7,24 +7,23 @@ import (
 	"os"
 )
 
-type index_vars struct {
-	Instance_id    string
-	Instance_index string
+type vars struct {
+	InstanceID    string
+	InstanceIndex string
 }
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-
-	instance_id := os.Getenv("CF_INSTANCE_GUID")
-	instance_index := os.Getenv("CF_INSTANCE_INDEX")
-	template_file, err := ioutil.ReadFile("index.html.template")
+	id := os.Getenv("CF_INSTANCE_GUID")
+	index := os.Getenv("CF_INSTANCE_INDEX")
+	f, err := ioutil.ReadFile("index.html.template")
 	if err != nil {
 		panic(err)
 	}
-	tmpl, err := template.New("goose").Parse(string(template_file))
+	tmpl, err := template.New("goose").Parse(string(f))
 	if err != nil {
 		panic(err)
 	}
-	err = tmpl.Execute(w, index_vars{Instance_id: instance_id, Instance_index: instance_index})
+	err = tmpl.Execute(w, vars{InstanceID: id, InstanceIndex: index})
 	if err != nil {
 		panic(err)
 	}
