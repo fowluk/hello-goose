@@ -2,7 +2,7 @@
 
 A really simple demo application in a number of languages for Pivotal Application Service / Cloud Foundry.
 
-*Hello Goose aims to provide a simple example application and manifest for every core buildpack so that you can see the differences between buildpack implementations and the languages used. We still need contributions for some buildpacks!*
+*Hello Goose aims to provide a simple example application and manifest for every core buildpack as a test and eudcational tool for exploring basic CF concepts. It also allows you to see some of the differences between buildpack implementations and the languages used. We still need contributions for some buildpacks!*
 
 See the application in action at https://hello-goose.cfapps.io or pick your language of choice and follow the instructions in the README within that directory.
 
