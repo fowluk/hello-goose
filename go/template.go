@@ -1,3 +1,6 @@
+package main
+
+const gooseTemplate = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +26,8 @@
 </div>
 <div>
     <h4>Server sent information :</h4>
-    <p>Instance id: {{.Instance_id}}</p>
-    <p>Instance index: {{.Instance_index}}</p>
+    <p>Instance ID: {{.InstanceID}}</p>
+    <p>Instance index: {{.InstanceIndex}}</p>
 </div>
 <footer>
     <div>
@@ -33,3 +36,4 @@
 </footer>
 </body>
 </html>
+`

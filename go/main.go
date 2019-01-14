@@ -1,31 +1,36 @@
 package main
 
 import (
-	"net/http"
-        "io/ioutil"
 	"html/template"
+	"net/http"
 	"os"
 )
 
-type index_vars struct {
-	Instance_id string
-	Instance_index string
+type instanceInfo struct {
+	InstanceID    string
+	InstanceIndex string
 }
 
-func IndexHandler(w http.ResponseWriter, r *http.Request) {
+var (
+	info instanceInfo
+	tmpl *template.Template
+)
 
-    instance_id := os.Getenv("CF_INSTANCE_GUID")
-	instance_index := os.Getenv("CF_INSTANCE_INDEX")
-	template_file, err :=  ioutil.ReadFile("index.html.template")
-	if err != nil { panic(err) }
-        tmpl, err := template.New("goose").Parse(string(template_file))
-	if err != nil { panic(err) }
-	err = tmpl.Execute(w, index_vars{Instance_id: instance_id, Instance_index: instance_index})
-	if err != nil { panic(err) }
+func indexHandler(w http.ResponseWriter, r *http.Request) {
+	if err := tmpl.Execute(w, info); err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+	}
 }
 
 func main() {
-	http.HandleFunc("/", IndexHandler)
+	info = instanceInfo{
+		InstanceID:    os.Getenv("CF_INSTANCE_GUID"),
+		InstanceIndex: os.Getenv("CF_INSTANCE_INDEX"),
+	}
+
+	tmpl = template.Must(template.New("goose").Parse(gooseTemplate))
+
+	http.HandleFunc("/", indexHandler)
 	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
 	http.ListenAndServe(":8080", nil)
 }
