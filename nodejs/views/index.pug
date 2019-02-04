@@ -1,0 +1,26 @@
+doctype html
+html
+  lang= en
+head
+  meta(charset='UTF-8')
+  title='Hello Goose !'
+  style
+    include static/css/style.css
+body
+  nav
+    h1= "Hello Goose !"
+  div
+    img(src="images/goose.jpg", alt="Goose", width="100%")
+  div
+    blockquote
+      | Here is my goose <br>
+      | Run it on the cloud for me <br>
+      | I do not care how
+      p= "- B.W. Goose"
+  div
+    h4='Server sent information :'
+    p= "Instance id: " + instance_id
+    p= "Instance index: " + instance_index
+  footer
+    div
+      a(href='https://github.com/jgjeffrey/hello-goose') Contribute here and claim your Goose contributor badge
