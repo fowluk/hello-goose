@@ -1,0 +1,17 @@
+{
+  "name": "hello-goose",
+  "version": "1.0.0",
+  "description": "A really simple demo application in nodejs/expressjs for Pivotal Application Service / Cloud Foundry.",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^5.13.0",
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bzhtux",
+  "license": "ISC"
+}
