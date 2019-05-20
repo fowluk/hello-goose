@@ -1,0 +1,6 @@
+applications:
+- name: hello-goose-ruby
+  memory: 256M
+  instances: 3
+  path: .
+  command: ruby main.rb
