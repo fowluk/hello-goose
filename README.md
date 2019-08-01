@@ -21,5 +21,6 @@ This is a test and education tool. The code in this repo may not be of productio
  * [PHP](php/): Probaby the simplest implementation of all.
  * [Go](go/): Minimal go version with no external dependencies.
  * [Python](python/): Quick and simple using Flask and a Jinja2 template with the option to vendor dependencies.
+ * [Ruby](ruby/): Absolutely minimal Sinatra app.
 
 N.B. We love pull requests and new language versions. The main rule is that all languages must produce exactly the same output barring necessary changes such as headers.
