@@ -5,3 +5,7 @@ spring-boot/target/*
 binary/app/binary
 nodejs/node_modules
 .vscode/*
+kotlin/build
+kotlin/out
+kotlin/.gradle
+kotlin/.idea
