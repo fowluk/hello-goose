@@ -4,7 +4,7 @@ This section contains Kubernetes deployments for Hello Goose.
 
 To work in Kubernetes we have to build a docker image. We offer different examples for how to do that.
 
-* buildpacks.io: An example using Cloud Native Buildpacks
+* [buildpacks.io](buildpacks.io/): An example using [Cloud Native Buildpacks](https://buildpacks.io/)
 * TBD
 
 Each one contains two scripts:
