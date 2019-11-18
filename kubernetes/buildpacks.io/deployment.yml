@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-goose-cnb
+  labels:
+    app: hello-goose-cnb
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-goose-cnb
+  template:
+    metadata:
+      labels:
+        app: hello-goose-cnb
+    spec:
+      containers:
+      - name: hello-goose-cnb
+        image: jjeffreypivotal/hello-goose-cnb:latest
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: Always
+        env:
+          - name: CF_INSTANCE_INDEX
+            value: kubernetes
+          - name: CF_INSTANCE_GUID
+            value: kubernetes
