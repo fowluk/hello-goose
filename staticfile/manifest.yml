@@ -1,0 +1,8 @@
+---
+applications:
+- name: hello-goose
+  path: .
+  command: $HOME/configure-and-run.sh
+  buildpacks:
+  - staticfile_buildpack
+  memory: 64m
